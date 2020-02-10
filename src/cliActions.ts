@@ -41,9 +41,10 @@ export const startContinuousMeasurementAction = async (scd30: SCD30, pressureStr
   await scd30.startContinuousMeasurement(pressure);
 
   print('Continuous measurement started.');
-  if (pressureString) {
-    print(`Ambient pressure compensation set to ${pressure} mBar`);
-  }
+  print(pressure === 0
+    ? `Ambient pressure compensation deactivated.`
+    : `Ambient pressure compensation set to ${pressure} mBar.`
+  );
 };
 
 export const stopContinuousMeasurementAction = async (scd30: SCD30): Promise<void> => {
