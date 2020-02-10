@@ -33,7 +33,7 @@ type Action = (...args: any[]) => Promise<void>;
 const withBus = (action: Action): Action => async (...args): Promise<void> => {
   const scd30 = await SCD30.connect(program.bus);
 
-  await action(scd30, args);
+  await action(scd30, ...args);
 
   await scd30.disconnect();
 }
