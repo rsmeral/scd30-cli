@@ -34,7 +34,7 @@ export const startContinuousMeasurementAction = async (scd30: SCD30, pressureStr
   const pressure = pressureString ? parseInt(pressureString) : 0;
 
   if (isNaN(pressure)) {
-    error('Invalid value provided for pressure. Must be between 700 and 1400 mBar, inclusive.');
+    error('Invalid value provided for pressure. Must be either 0, or a value between 700 and 1400 mBar, inclusive.');
     return;
   }
 
