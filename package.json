@@ -4,8 +4,11 @@
   "license": "MIT",
   "main": "dist/index.js",
   "author": "Ron Smeral",
+  "repository": "github:rsmeral/scd30-cli",
+  "keywords": ["sensor", "co2", "i2c", "cli"],
   "dependencies": {
     "commander": "^4.1.1",
+    "scd30-node": "^1.0.1",
     "table": "^5.4.6"
   },
   "devDependencies": {
@@ -16,5 +19,11 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "bin": "./dist/index.js"
+  "bin": "./dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md",
+    "package.json"
+  ]
 }
