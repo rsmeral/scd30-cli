@@ -44,38 +44,34 @@ Refer to [official documentation](https://www.sensirion.com/fileadmin/user_uploa
 * [read-measurement](#read-measurement)
 * [status](#status)
 * [is-data-ready](#is-data-ready)
-* [start-continuous-measurement](#start-continuous-measurement)
+* [start-continuous-measurement](#start-continuous-measurement-pressure)
 * [stop-continuous-measurement](#stop-continuous-measurement)
-* [set-measurement-interval](#set-measurement-interval)
+* [set-measurement-interval](#set-measurement-interval-interval)
 * [get-measurement-interval](#get-measurement-interval)
 * [start-asc](#start-asc)
 * [stop-asc](#stop-asc)
 * [get-asc-status](#get-asc-status)
-* [set-frc-value](#set-frc-value)
+* [set-frc-value](#set-frc-value-co2ppm)
 * [get-frc-value](#get-frc-value)
-* [set-temp-offset](#set-temp-offset)
+* [set-temp-offset](#set-temp-offset-offset)
 * [get-temp-offset](#get-temp-offset)
-* [set-altitude-compensation](#set-altitude-compensation)
+* [set-altitude-compensation](#set-altitude-compensation-altitude)
 * [get-altitude-compensation](#get-altitude-compensation)
 * [get-firmware-version](#get-firmware-version)
 * [soft-reset](#soft-reset)
 
-<a name="read-measurement"></a>
 ### `read-measurement`
 
 Read a measurement of CO2 concentration, temperature, and humidity.
 
-<a name="status"></a>
 ### `status`
 
 Queries for data ready status, ASC status, FRC value, temperature offset, altitude compensation,continuous measurement interval, and firmware version
 
-<a name="is-data-ready"></a>
 ### `is-data-ready`
 
 Determines if a measurement can be read from the sensor's buffer.
 
-<a name="start-continuous-measurement [pressure]"></a>
 ### `start-continuous-measurement [pressure]`
 
 Starts continuous measurement of CO2 concentration, temperature, and humidity.
@@ -86,12 +82,10 @@ Starts continuous measurement of CO2 concentration, temperature, and humidity.
     Setting to 0 deactivates ambient pressure compensation.<br/>
     To set new value, re-run `start-continuous-measurement`.
 
-<a name="stop-continuous-measurement"></a>
 ### `stop-continuous-measurement`
 
 Stops continuous measurement of CO2 concentration, temperature, and humidity.
 
-<a name="set-measurement-interval <interval>"></a>
 ### `set-measurement-interval <interval>`
 
 Sets the interval of continuous measurement.
@@ -104,22 +98,18 @@ Sets the interval of continuous measurement.
 
 Returns the interval of continuous measurement.
 
-<a name="start-asc"></a>
 ### `start-asc`
 
 Starts the automatic self-calibration.
 
-<a name="stop-asc"></a>
 ### `stop-asc`
 
 Stops the automatic self-calibration.
 
-<a name="get-asc-status"></a>
 ### `get-asc-status`
 
 Returns the status of automatic self-calibration.
 
-<a name="set-frc-value <co2ppm>"></a>
 ### `set-frc-value <co2ppm>`
 
 Sets the reference CO2 concentration for forced re-calibration.
@@ -127,12 +117,10 @@ Sets the reference CO2 concentration for forced re-calibration.
 * `co2ppm`
   * Concentration of CO2, 400-2000 ppm
 
-<a name="get-frc-value"></a>
 ### `get-frc-value`
 
 Returns the reference CO2 concentration for forced re-calibration.
 
-<a name="set-temp-offset <offset>"></a>
 ### `set-temp-offset <offset>`
 
 Sets the temperature offset.
@@ -140,12 +128,10 @@ Sets the temperature offset.
 * `offset`
   * Temperature offset in units of 0.01°C
 
-<a name="get-temp-offset"></a>
 ### `get-temp-offset`
 
 Returns the temperature offset.
 
-<a name="set-altitude-compensation <altitude>"></a>
 ### `set-altitude-compensation <altitude>`
 
 Sets the altitude compensation value.
@@ -153,17 +139,14 @@ Sets the altitude compensation value.
 * `altitude`
   * Altitude in meters above sea level
 
-<a name="get-altitude-compensation"></a>
 ### `get-altitude-compensation`
 
 Returns the altitude compensation value.
 
-<a name="get-firmware-version"></a>
 ### `get-firmware-version`
 
 Returns the firmware version.
 
-<a name="soft-reset"></a>
 ### `soft-reset`
 
 Performs a soft reset.
