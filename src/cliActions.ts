@@ -1,5 +1,4 @@
 import {table} from 'table';
-
 import {SCD30} from 'scd30-node';
 
 const print = console.log;
@@ -123,13 +122,13 @@ export const setTempOffsetAction = async (scd30: SCD30, offsetString: string): P
 
   await scd30.setTemperatureOffset(offset);
 
-  print(`Temperature offset set to ${offset}°C`);
+  print(`Temperature offset set to ${offset / 100}°C`);
 };
 
 export const getTempOffsetAction = async (scd30: SCD30): Promise<void> => {
   const offset = await scd30.getTemperatureOffset();
 
-  const output = table([['Temperature offset', `${offset}°C`]]);
+  const output = table([['Temperature offset', `${offset / 100}°C`]]);
 
   print(output);
 };
@@ -148,9 +147,9 @@ export const setAltitudeCompensationAction = async (scd30: SCD30, altitudeString
 };
 
 export const getAltitudeCompensationAction = async (scd30: SCD30): Promise<void> => {
-  const offset = await scd30.getAltitudeCompensation();
+  const altitude = await scd30.getAltitudeCompensation();
 
-  const output = table([['Altitude', `${offset} meters above sea level`]]);
+  const output = table([['Altitude', `${altitude} meters above sea level`]]);
 
   print(output);
 };
@@ -183,7 +182,7 @@ export const statusAction = async (scd30: SCD30): Promise<void> => {
     ['Continuous measurement interval', `${interval} seconds`],
     ['ASC active', ascActive ? 'Yes' : 'No'],
     ['Reference CO2 concentration for FRC', `${frcValue} ppm`],
-    ['Temperature offset', `${tempOffset}°C`],
+    ['Temperature offset', `${tempOffset / 100}°C`],
     ['Altitude compensation', `${altComp} meters above sea level`],
     ['Firmware version', fwVersion]
   ]);

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import program from 'commander';
-
 import {SCD30} from 'scd30-node';
+
 import {
   isDataReadyAction,
   readMeasurementAction,
