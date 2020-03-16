@@ -22,7 +22,8 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "tsc"
   },
   "types": "./dist/index.d.ts",
   "bin": "./dist/index.js",
