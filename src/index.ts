@@ -51,7 +51,7 @@ program
     '-b, --bus <number>',
     'The number of the I2C bus to open.\n' +
     '0 for /dev/i2c-0, 1 for /dev/i2c-1, ...',
-    parseInt,
+    (val) => parseInt(val, 10),
     1
   );
 
