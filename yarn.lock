@@ -121,10 +121,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-scd30-node@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/scd30-node/-/scd30-node-1.0.1.tgz#18d5556bfbbe3dc96c324e9591e8f473bb30cf90"
-  integrity sha512-VFyWHqQzowW2JIKJAr4bXwQuo0H7WKCgevDO683gNofyHzLQewaw5Nx5b6OMKfwqB3jVbvj4bR0NxrfutsFfOA==
+scd30-node@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/scd30-node/-/scd30-node-1.0.3.tgz#888def5e85cdf3a7671ba96a63338be79fb0bac3"
+  integrity sha512-e7LLKVXhdN2w84jrT8TkniZmInLiRaRIAsiQG29QUWbpCW03b+AKjLS43IK//tp8mEhOJIMkJ/S7gI55L3b3bQ==
   dependencies:
     crc-full "^1.1.0"
     i2c-bus "^5.1.0"

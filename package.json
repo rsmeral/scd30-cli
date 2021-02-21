@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "commander": "^4.1.1",
-    "scd30-node": "^1.0.1",
+    "scd30-node": "^1.0.3",
     "table": "^5.4.6"
   },
   "devDependencies": {
